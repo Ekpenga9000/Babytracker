@@ -4,10 +4,12 @@ import Home from "./pages/Home";
 import Authentication from "./pages/Authentication";
 import Feeding from "./pages/Feeding";
 import Diaper from "./pages/Diaper";
+import Nav from "./components/Nav";
 function App() {
   return (
     <BrowserRouter>
     <Toaster />
+    <Nav/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/authentication" element={<Authentication />} />
