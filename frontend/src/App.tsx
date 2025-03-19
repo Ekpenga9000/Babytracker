@@ -1,12 +1,20 @@
-import './App.css'
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Toaster } from "react-hot-toast"; 
+import Home from "./pages/Home";
+import Authentication from "./pages/Authentication";
+import Feeding from "./pages/Feeding";
+import Diaper from "./pages/Diaper";
 function App() {
-  
-
   return (
-    <div>
-      <h1>Baby tracker app</h1>
-    </div>
+    <BrowserRouter>
+    <Toaster />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/authentication" element={<Authentication />} />
+        <Route path="/feeding" element={<Feeding/>} />
+        <Route path="/diaper" element={<Diaper/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
